@@ -1,0 +1,1 @@
+F:\visual studio 2015\Projects\Chess\Chess\bin\Debug\Chess.exe.config
