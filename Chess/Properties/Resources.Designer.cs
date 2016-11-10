@@ -63,9 +63,9 @@ namespace Chess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BlackBackground {
+        internal static System.Drawing.Bitmap BlackBG {
             get {
-                object obj = ResourceManager.GetObject("BlackBackground", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace Chess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WhiteBackground {
+        internal static System.Drawing.Bitmap BlackBishopOnBlackBG {
             get {
-                object obj = ResourceManager.GetObject("WhiteBackground", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackBishopOnBlackBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Chess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WhiteBishop {
+        internal static System.Drawing.Bitmap BlackBishopOnWhiteBG {
             get {
-                object obj = ResourceManager.GetObject("WhiteBishop", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackBishopOnWhiteBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace Chess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WhiteCastle {
+        internal static System.Drawing.Bitmap BlackCastleOnBlackBG {
             get {
-                object obj = ResourceManager.GetObject("WhiteCastle", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackCastleOnBlackBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Chess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WhiteKing {
+        internal static System.Drawing.Bitmap BlackCastleOnWhiteBG {
             get {
-                object obj = ResourceManager.GetObject("WhiteKing", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackCastleOnWhiteBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Chess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WhiteKnight {
+        internal static System.Drawing.Bitmap BlackKingOnBlackBG {
             get {
-                object obj = ResourceManager.GetObject("WhiteKnight", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackKingOnBlackBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Chess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WhitePawn {
+        internal static System.Drawing.Bitmap BlackKingOnWhiteBG {
             get {
-                object obj = ResourceManager.GetObject("WhitePawn", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackKingOnWhiteBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,189 @@ namespace Chess.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WhiteQueen {
+        internal static System.Drawing.Bitmap BlackKnightOnBlackBG {
             get {
-                object obj = ResourceManager.GetObject("WhiteQueen", resourceCulture);
+                object obj = ResourceManager.GetObject("BlackKnightOnBlackBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BlackKnightOnWhiteBG {
+            get {
+                object obj = ResourceManager.GetObject("BlackKnightOnWhiteBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BlackPawnOnBlackBG {
+            get {
+                object obj = ResourceManager.GetObject("BlackPawnOnBlackBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BlackPawnOnWhiteBG {
+            get {
+                object obj = ResourceManager.GetObject("BlackPawnOnWhiteBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BlackQueenOnBlackBG {
+            get {
+                object obj = ResourceManager.GetObject("BlackQueenOnBlackBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap BlackQueenOnWhiteBG {
+            get {
+                object obj = ResourceManager.GetObject("BlackQueenOnWhiteBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteBishopOnBlackBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteBishopOnBlackBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteBishopOnWhiteBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteBishopOnWhiteBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteCastleOnBlackBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteCastleOnBlackBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteCastleOnWhiteBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteCastleOnWhiteBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteKingOnBlackBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteKingOnBlackBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteKingOnWhiteBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteKingOnWhiteBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteKnightOnBlackBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteKnightOnBlackBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteKnightOnWhiteBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteKnightOnWhiteBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhitePawnOnBlackBG {
+            get {
+                object obj = ResourceManager.GetObject("WhitePawnOnBlackBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhitePawnOnWhiteBG {
+            get {
+                object obj = ResourceManager.GetObject("WhitePawnOnWhiteBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteQueenOnBlackBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteQueenOnBlackBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhiteQueenOnWhiteBG {
+            get {
+                object obj = ResourceManager.GetObject("WhiteQueenOnWhiteBG", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

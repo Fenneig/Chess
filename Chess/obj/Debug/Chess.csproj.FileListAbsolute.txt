@@ -1,9 +1,9 @@
 F:\visual studio 2015\Projects\Chess\Chess\bin\Debug\Chess.exe.config
 F:\visual studio 2015\Projects\Chess\Chess\obj\Debug\Chess.csprojResolveAssemblyReference.cache
-F:\visual studio 2015\Projects\Chess\Chess\obj\Debug\Chess.Form1.resources
 F:\visual studio 2015\Projects\Chess\Chess\obj\Debug\Chess.csproj.GenerateResource.Cache
 F:\visual studio 2015\Projects\Chess\Chess\bin\Debug\Chess.exe
 F:\visual studio 2015\Projects\Chess\Chess\bin\Debug\Chess.pdb
 F:\visual studio 2015\Projects\Chess\Chess\obj\Debug\Chess.Properties.Resources.resources
 F:\visual studio 2015\Projects\Chess\Chess\obj\Debug\Chess.exe
 F:\visual studio 2015\Projects\Chess\Chess\obj\Debug\Chess.pdb
+F:\visual studio 2015\Projects\Chess\Chess\obj\Debug\Chess.MainForm.resources

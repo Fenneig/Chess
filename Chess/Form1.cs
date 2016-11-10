@@ -10,12 +10,29 @@ using System.Windows.Forms;
 
 namespace Chess
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        PictureBox[,] field = new PictureBox[8, 8];
+
+        public MainForm()
         {
             InitializeComponent();
-            pictureBox2.BackColor = Color.Transparent; //?
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    field[i, j] = new PictureBox();
+                    this.Controls.Add(field[i, j]);
+                    field[i, j].Image = ((i + j) % 2 == 0) ? Properties.Resources.BlackBG : Properties.Resources.WhiteBG;
+                    field[i, j].Location = new Point(i * 81 + 16, j * 81 + 16);
+                    field[i, j].SizeMode = PictureBoxSizeMode.AutoSize;
+                }
+            }
+            PictureBox RedFrame = new PictureBox();
+            this.Controls.Add(RedFrame);
+            RedFrame.Size = new Size(680, 680);
+            RedFrame.BackColor = Color.DarkRed;
+            
         }
     }
 }

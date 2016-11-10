@@ -81,28 +81,82 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\BlackBackground.jpg" />
+    <None Include="Properties\Images\BlackBishopOnBlackBG.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\WhiteBackground.jpg" />
+    <None Include="Properties\Images\BlackBishopOnWhiteBG.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\WhiteBishop.jpg" />
+    <None Include="Properties\Images\BlackCastleOnBlackBG.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\WhiteCastle.jpg" />
+    <None Include="Properties\Images\BlackCastleOnWhiteBG.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\WhiteKing.jpg" />
+    <None Include="Properties\Images\BlackKingOnBlackBG.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\WhiteKnight.jpg" />
+    <None Include="Properties\Images\BlackKingOnWhiteBG.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\WhitePawn.jpg" />
+    <None Include="Properties\Images\BlackKnightOnBlackBG.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\WhiteQueen.jpg" />
+    <None Include="Properties\Images\BlackKnightOnWhiteBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackPawnOnBlackBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackPawnOnWhiteBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackQueenOnBlackBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackQueenOnWhiteBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteBishopOnBlackBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteBishopOnWhiteBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteCastleOnBlackBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteCastleOnWhiteBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteKingOnBlackBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteKingOnWhiteBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteKnightOnBlackBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteKnightOnWhiteBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhitePawnOnBlackBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhitePawnOnWhiteBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteQueenOnBlackBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteQueenOnWhiteBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteBG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

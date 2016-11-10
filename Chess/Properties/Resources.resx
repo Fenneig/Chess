@@ -118,28 +118,82 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="WhiteBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\WhiteBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BlackKingOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackKingOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="BlackBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\BlackBackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BlackKingOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackKingOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WhiteKnight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\WhiteKnight.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhitePawnOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhitePawnOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WhiteBishop" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\WhiteBishop.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BlackBishopOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackBishopOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WhiteKing" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\WhiteKing.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhiteCastleOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteCastleOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WhiteCastle" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\WhiteCastle.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhitePawnOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhitePawnOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WhitePawn" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\WhitePawn.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WhiteKingOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteKingOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WhiteQueen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Images\WhiteQueen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="BlackCastleOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackCastleOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteQueenOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteQueenOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlackCastleOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackCastleOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteQueenOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteQueenOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlackPawnOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackPawnOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteBishopOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteBishopOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlackKnightOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackKnightOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteKingOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteKingOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlackPawnOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackPawnOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteKnightOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteKnightOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteKnightOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteKnightOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteBishopOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteBishopOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlackQueenOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackQueenOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteCastleOnWhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteCastleOnWhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlackQueenOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackQueenOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlackBishopOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackBishopOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlackKnightOnBlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackKnightOnBlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BlackBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\BlackBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhiteBG" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Images\WhiteBG.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
