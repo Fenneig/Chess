@@ -15,6 +15,7 @@ namespace Chess
         public Form1()
         {
             InitializeComponent();
+            pictureBox2.BackColor = Color.Transparent; //?
         }
     }
 }
