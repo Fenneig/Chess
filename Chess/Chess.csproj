@@ -46,16 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Classes\Bishop.cs" />
+    <Compile Include="Classes\Castle.cs" />
+    <Compile Include="Classes\Field.cs" />
+    <Compile Include="Classes\Figure.cs" />
+    <Compile Include="Classes\King.cs" />
+    <Compile Include="Classes\Knight.cs" />
+    <Compile Include="Classes\Queen.cs" />
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\Pawn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,82 +89,52 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\BlackBishopOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackBishopOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackCastleOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackCastleOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackKingOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackKingOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackKnightOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackKnightOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackPawnOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackPawnOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackQueenOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackQueenOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteBishopOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteBishopOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteCastleOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteCastleOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteKingOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteKingOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteKnightOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteKnightOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhitePawnOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhitePawnOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteQueenOnBlackBG.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteQueenOnWhiteBG.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\Images\BlackBG.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Images\WhiteBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhitePawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackBishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackCastle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackKing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackKnight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackPawn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackQueen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteBishop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteCastle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteKing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteKnight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteQueen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackBGMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteBGMove.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
