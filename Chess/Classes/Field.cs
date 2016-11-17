@@ -8,10 +8,11 @@ using System.Drawing;
 
 namespace Chess
 {
-    class Field
+    class Cell
     {
         PictureBox _pb;
-        bool isWhite;
+        bool _isWhiteCell;
+        bool _isOccupied;
 
         public Point Location
         {
@@ -23,12 +24,13 @@ namespace Chess
             get { return _pb; }
         }
 
-        public Field(int i, int j, PictureBox pb)
+        public Cell(int i, int j, PictureBox pb)
         {
-            isWhite = ((i + j) % 2 == 1);
+            _isWhiteCell = ((i + j) % 2 == 1);
             _pb = pb;
             _pb.SizeMode = PictureBoxSizeMode.AutoSize;
-            if (isWhite)
+            _isOccupied = false;
+            if (_isWhiteCell)
             {
                 _pb.BackgroundImage = Properties.Resources.WhiteBG;
                 _pb.Image = Properties.Resources.WhiteBG;
@@ -40,9 +42,21 @@ namespace Chess
             }
         }
 
-        public void Put_Figure(Figure fig)
+        public void PutFigure(Figure fig)
         {
             _pb.Image = fig.pb.Image;
+            _isOccupied = true;
+        }
+
+        public void LeaveFigure()
+        {
+            _pb.Image = _pb.BackgroundImage;
+        }
+
+        public bool IsOccupied
+        {
+            get { return _isOccupied; }
+            set { _isOccupied = value; }
         }
         
 

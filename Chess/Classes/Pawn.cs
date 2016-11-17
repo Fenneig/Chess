@@ -9,8 +9,9 @@ namespace Chess
 {
     class Pawn : Figure
     {
-        public Pawn(bool isWhite)
+        public Pawn(bool isWhite, int i, int j)
         {
+            _pos = new Position(i, j);
             _isDead = false;
             _isWhite = isWhite;
             if (_isWhite)
@@ -19,14 +20,18 @@ namespace Chess
                 _pb.Image = Properties.Resources.BlackPawn;
         }
 
-        public override void Move(int i, int j)
+        public override List<Position> Moveable()
         {
-            throw new NotImplementedException();
-        }
-
-        public override void Eat(int i, int j)
-        {
-            throw new NotImplementedException();
+            List<Position> list = new List<Position>();
+            Position temp = new Position();
+            if (_isWhite)
+            {
+                if (_pos.J == 6)
+                    list.Add(new Position(_pos.I, _pos.J - 2));
+                for (int i = -1; i <= 1; i++)
+                    list.Add(new Position(_pos.I - i, _pos.J - 1));
+            }
+            return list;
         }
     }
 }

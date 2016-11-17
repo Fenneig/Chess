@@ -11,12 +11,11 @@ namespace Chess
     {
         public bool _isWhite;
         public bool _isDead;
-        int _i, _j;
+        public Position _pos;
+
         public PictureBox _pb = new PictureBox();
 
-
-        public abstract void Move(int i, int j);
-        public abstract void Eat(int i, int j);
+        public abstract List<Position> Moveable();
 
         public PictureBox pb { get { return _pb; } }
         

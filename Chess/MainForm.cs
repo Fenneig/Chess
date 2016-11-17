@@ -12,21 +12,25 @@ namespace Chess
 {
     public partial class MainForm : Form
     {
-
-        Field[,] field = new Field[8, 8];
+        Cell[,] field = new Cell[8, 8];
+        int size = 81;
+        int indent = 16;
 
         public MainForm()
         {
             InitializeComponent();
+
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
                 {
                     PictureBox pb = new PictureBox();
                     pb.SizeMode = PictureBoxSizeMode.AutoSize;
-                    field[i, j] = new Field(i, j, pb);
-                    field[i, j].Location = new Point(i * 81 + 16, j * 81 + 16);
-                    this.Controls.Add(field[i,j].PB);
+                    field[i, j] = new Cell(i, j, pb);
+                    field[i, j].Location = new Point(i * size + indent, j * size + indent);
+                    field[i, j].PB.MouseClick += Pb_MouseClick;
+                    this.Controls.Add(field[i, j].PB);
+                    field[i, j].PB.Tag = new Position(i, j);
                 }
             }
 
@@ -38,75 +42,81 @@ namespace Chess
             CreateDefaultPosition();
         }
 
+        private void Pb_MouseClick(object sender, MouseEventArgs e)
+        {
+            Position pos = (Position)((PictureBox)sender).Tag;
+            //field[pos.I, pos.J].LeaveFigure();
+        }
+
         public void CreateDefaultPosition()
         {
-            Figure blackCastle1 = new Castle(false);
-            Figure blackCastle2 = new Castle(false);
-            Figure blackBishop1 = new Bishop(false);
-            Figure blackBishop2 = new Bishop(false);
-            Figure blackKnight1 = new Knight(false);
-            Figure blackKnight2 = new Knight(false);
-            Figure blackKing    = new King(false);
-            Figure blackQueen   = new Queen(false);
-            Figure blackPawn1   = new Pawn(false);
-            Figure blackPawn2   = new Pawn(false);
-            Figure blackPawn3   = new Pawn(false);
-            Figure blackPawn4   = new Pawn(false);
-            Figure blackPawn5   = new Pawn(false);
-            Figure blackPawn6   = new Pawn(false);
-            Figure blackPawn7   = new Pawn(false);
-            Figure blackPawn8   = new Pawn(false);
+            Figure blackCastle1 = new Castle(false, 0, 0);
+            Figure blackCastle2 = new Castle(false, 7, 0);
+            Figure blackKnight1 = new Knight(false, 1, 0);
+            Figure blackKnight2 = new Knight(false, 6, 0);
+            Figure blackBishop1 = new Bishop(false, 2, 0);
+            Figure blackBishop2 = new Bishop(false, 5, 0);
+            Figure blackKing    =   new King(false, 3, 0);
+            Figure blackQueen   =  new Queen(false, 4, 0);
+            Figure blackPawn1   =   new Pawn(false, 0, 1);
+            Figure blackPawn2   =   new Pawn(false, 1, 0);
+            Figure blackPawn3   =   new Pawn(false, 2, 0);
+            Figure blackPawn4   =   new Pawn(false, 3, 0);
+            Figure blackPawn5   =   new Pawn(false, 4, 0);
+            Figure blackPawn6   =   new Pawn(false, 5, 0);
+            Figure blackPawn7   =   new Pawn(false, 6, 0);
+            Figure blackPawn8   =   new Pawn(false, 7, 0);
 
-            Figure whiteCastle1 = new Castle(true);
-            Figure whiteCastle2 = new Castle(true);
-            Figure whiteBishop1 = new Bishop(true);
-            Figure whiteBishop2 = new Bishop(true);
-            Figure whiteKnight1 = new Knight(true);
-            Figure whiteKnight2 = new Knight(true);
-            Figure whiteKing    = new King(true);
-            Figure whiteQueen   = new Queen(true);
-            Figure whitePawn1   = new Pawn(true);
-            Figure whitePawn2   = new Pawn(true);
-            Figure whitePawn3   = new Pawn(true);
-            Figure whitePawn4   = new Pawn(true);
-            Figure whitePawn5   = new Pawn(true);
-            Figure whitePawn6   = new Pawn(true);
-            Figure whitePawn7   = new Pawn(true);
-            Figure whitePawn8   = new Pawn(true);
+            Figure whiteCastle1 = new Castle(true, 0, 7);
+            Figure whiteCastle2 = new Castle(true, 7, 7);
+            Figure whiteKnight1 = new Knight(true, 1, 7);
+            Figure whiteKnight2 = new Knight(true, 6, 7);
+            Figure whiteBishop1 = new Bishop(true, 2, 7);
+            Figure whiteBishop2 = new Bishop(true, 5, 7);
+            Figure whiteKing    =   new King(true, 3, 7);
+            Figure whiteQueen   =  new Queen(true, 4, 7);
+            Figure whitePawn1   =   new Pawn(true, 0, 6);
+            Figure whitePawn2   =   new Pawn(true, 1, 6);
+            Figure whitePawn3   =   new Pawn(true, 2, 6);
+            Figure whitePawn4   =   new Pawn(true, 3, 6);
+            Figure whitePawn5   =   new Pawn(true, 4, 6);
+            Figure whitePawn6   =   new Pawn(true, 5, 6);
+            Figure whitePawn7   =   new Pawn(true, 6, 6);
+            Figure whitePawn8   =   new Pawn(true, 7, 6);
 
-            field[0, 0].Put_Figure(blackCastle1);
-            field[1, 0].Put_Figure(blackKnight1);
-            field[2, 0].Put_Figure(blackBishop1);
-            field[3, 0].Put_Figure(blackKing);
-            field[4, 0].Put_Figure(blackQueen);
-            field[5, 0].Put_Figure(blackBishop2);
-            field[6, 0].Put_Figure(blackKnight2);
-            field[7, 0].Put_Figure(blackCastle2);
-            field[0, 1].Put_Figure(blackPawn1);
-            field[1, 1].Put_Figure(blackPawn2);
-            field[2, 1].Put_Figure(blackPawn3);
-            field[3, 1].Put_Figure(blackPawn4);
-            field[4, 1].Put_Figure(blackPawn5);
-            field[5, 1].Put_Figure(blackPawn6);
-            field[6, 1].Put_Figure(blackPawn7);
-            field[7, 1].Put_Figure(blackPawn8);
+            field[0, 0].PutFigure(blackCastle1);
+            field[1, 0].PutFigure(blackKnight1);
+            field[2, 0].PutFigure(blackBishop1);
+            field[3, 0].PutFigure(blackKing);
+            field[4, 0].PutFigure(blackQueen);
+            field[5, 0].PutFigure(blackBishop2);
+            field[6, 0].PutFigure(blackKnight2);
+            field[7, 0].PutFigure(blackCastle2);
+            field[0, 1].PutFigure(blackPawn1);
+            field[1, 1].PutFigure(blackPawn2);
+            field[2, 1].PutFigure(blackPawn3);
+            field[3, 1].PutFigure(blackPawn4);
+            field[4, 1].PutFigure(blackPawn5);
+            field[5, 1].PutFigure(blackPawn6);
+            field[6, 1].PutFigure(blackPawn7);
+            field[7, 1].PutFigure(blackPawn8);
 
-            field[0, 7].Put_Figure(whiteCastle1);
-            field[1, 7].Put_Figure(whiteKnight1);
-            field[2, 7].Put_Figure(whiteBishop1);
-            field[3, 7].Put_Figure(whiteKing);
-            field[4, 7].Put_Figure(whiteQueen);
-            field[5, 7].Put_Figure(whiteBishop2);
-            field[6, 7].Put_Figure(whiteKnight2);
-            field[7, 7].Put_Figure(whiteCastle2);
-            field[0, 6].Put_Figure(whitePawn1);
-            field[1, 6].Put_Figure(whitePawn2);
-            field[2, 6].Put_Figure(whitePawn3);
-            field[3, 6].Put_Figure(whitePawn4);
-            field[4, 6].Put_Figure(whitePawn5);
-            field[5, 6].Put_Figure(whitePawn6);
-            field[6, 6].Put_Figure(whitePawn7);
-            field[7, 6].Put_Figure(whitePawn8);
+            field[0, 7].PutFigure(whiteCastle1);
+            field[1, 7].PutFigure(whiteKnight1);
+            field[2, 7].PutFigure(whiteBishop1);
+            field[3, 7].PutFigure(whiteKing);
+            field[4, 7].PutFigure(whiteQueen);
+            field[5, 7].PutFigure(whiteBishop2);
+            field[6, 7].PutFigure(whiteKnight2);
+            field[7, 7].PutFigure(whiteCastle2);
+            field[0, 6].PutFigure(whitePawn1);
+            field[1, 6].PutFigure(whitePawn2);
+            field[2, 6].PutFigure(whitePawn3);
+            field[3, 6].PutFigure(whitePawn4);
+            field[4, 6].PutFigure(whitePawn5);
+            field[5, 6].PutFigure(whitePawn6);
+            field[6, 6].PutFigure(whitePawn7);
+            field[7, 6].PutFigure(whitePawn8);
 
         }
 

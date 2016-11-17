@@ -9,8 +9,9 @@ namespace Chess
 {
     class Castle : Figure
     {
-        public Castle(bool isWhite)
+        public Castle(bool isWhite, int i, int j)
         {
+            _pos = new Position(i, j);
             _isDead = false;
             _isWhite = isWhite;
             if (_isWhite)
@@ -19,12 +20,7 @@ namespace Chess
                 _pb.Image = Properties.Resources.BlackCastle;
         }
 
-        public override void Eat(int i, int j)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Move(int i, int j)
+        public override List<Position> Moveable()
         {
             throw new NotImplementedException();
         }
