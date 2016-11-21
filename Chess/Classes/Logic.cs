@@ -20,28 +20,18 @@ namespace Chess
 
         public void Click(Position pos)
         {
+            _isWhiteTurn = (_movesCounter % 2 == 0);
             if (_table[pos.I, pos.J].IsOccupied && !_table[pos.I, pos.J].IsSelected)
             {
-                ShowMoves(pos);
-                _table[pos.I, pos.J].IsMoves = true;
+                if (_isWhiteTurn == _table[pos.I, pos.J].GetFigure.IsWhite)
+                {
+                    ShowMoves(pos);
+                    _table[pos.I, pos.J].IsMoves = true;
+                }
             }
             else if (_table[pos.I, pos.J].IsSelected)
             {
-                if (_table[pos.I, pos.J].IsOccupied) _table[pos.I, pos.J].LeaveFigure();
-
-                for (int i = 0; i < 8; i++)
-                    for (int j = 0; j < 8; j++)
-                        if (_table[i, j].IsMoves)
-                        {
-                            _table[pos.I, pos.J].PutFigure(_table[i, j].GetFigure);
-                            _table[pos.I, pos.J].GetFigure.Pos = pos;
-                            _table[i, j].LeaveFigure();
-                            break;
-                        }
-
-                Deselection();
-
-
+                Move(pos);
             }
 
             else Deselection();
@@ -50,6 +40,20 @@ namespace Chess
         private void Move(Position pos)
         {
 
+            if (_table[pos.I, pos.J].IsOccupied) _table[pos.I, pos.J].LeaveFigure();
+
+            for (int i = 0; i < 8; i++)
+                for (int j = 0; j < 8; j++)
+                    if (_table[i, j].IsMoves)
+                    {
+                        _table[pos.I, pos.J].PutFigure(_table[i, j].GetFigure);
+                        _table[pos.I, pos.J].GetFigure.Pos = pos;
+                        _table[i, j].LeaveFigure();
+                        break;
+                    }
+
+            Deselection();
+            _movesCounter++;
         }
         
         private void ShowMoves(Position pos)
@@ -97,6 +101,15 @@ namespace Chess
                     {
                         if (temp.GetFigure.IsWhite)
                         {
+                            if (_table[pos.I, pos.J - 1].IsOccupied)
+                            {
+                                _table[pos.I, pos.J - 1].DeselectCell();
+                                _table[pos.I, pos.J - 2].DeselectCell();
+                            }
+                            if (_table[pos.I, pos.J - 2].IsOccupied)
+                            {
+                                _table[pos.I, pos.J - 2].DeselectCell();
+                            }
                             if ((pos.I > 0 && pos.J > 0) && !_table[pos.I - 1, pos.J - 1].IsOccupied)
                             {
                                 _table[pos.I - 1, pos.J - 1].DeselectCell();
@@ -123,6 +136,15 @@ namespace Chess
                         }
                         else
                         {
+                            if (_table[pos.I, pos.J + 1].IsOccupied)
+                            {
+                                _table[pos.I, pos.J + 1].DeselectCell();
+                                _table[pos.I, pos.J + 2].DeselectCell();
+                            }
+                            if (_table[pos.I, pos.J + 2].IsOccupied)
+                            {
+                                _table[pos.I, pos.J + 2].DeselectCell();
+                            }
                             if ((pos.I > 0 && pos.J < 7) && !_table[pos.I - 1, pos.J + 1].IsOccupied)
                             {
                                 _table[pos.I - 1, pos.J + 1].DeselectCell();
@@ -151,7 +173,7 @@ namespace Chess
                         break;
                     }
                 #endregion
-
+                    
                 #region Убираем лишние ходы коня
                 case "Knight":
                     {
@@ -181,7 +203,7 @@ namespace Chess
                         break;
                     }
                 #endregion
-
+    
                 #region Убираем лишние ходы слона
                 case "Bishop":
                     {

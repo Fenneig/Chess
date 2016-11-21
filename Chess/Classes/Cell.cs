@@ -58,6 +58,7 @@ namespace Chess
         public void LeaveFigure()
         {
             _pb.Image = _pb.BackgroundImage;
+            _pb.Image = null;
             _isOccupied = false;
             _fig.Dying();
             _fig = null;

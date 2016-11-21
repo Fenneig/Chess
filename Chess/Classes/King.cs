@@ -30,7 +30,7 @@ namespace Chess
                 for (int j = -1; j <= 1; j++)
                 {
                     if (i == 0 && j == 0) continue;
-                    if (_pos.I + i > 0 && _pos.I + i < 8 && _pos.J + j > 0 && _pos.J + j < 8)
+                    if (_pos.I + i >= 0 && _pos.I + i < 8 && _pos.J + j >= 0 && _pos.J + j < 8)
                         temp.Add(new Position(_pos.I + i, _pos.J + j));
                 }
             }
