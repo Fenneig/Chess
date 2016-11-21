@@ -48,12 +48,13 @@
   <ItemGroup>
     <Compile Include="Classes\Bishop.cs" />
     <Compile Include="Classes\Castle.cs" />
-    <Compile Include="Classes\Field.cs" />
+    <Compile Include="Classes\Cell.cs" />
     <Compile Include="Classes\Figure.cs" />
     <Compile Include="Classes\King.cs" />
     <Compile Include="Classes\Knight.cs" />
     <Compile Include="Classes\Position.cs" />
     <Compile Include="Classes\Queen.cs" />
+    <Compile Include="Classes\Logic.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

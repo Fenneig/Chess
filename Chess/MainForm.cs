@@ -15,6 +15,7 @@ namespace Chess
         Cell[,] field = new Cell[8, 8];
         int size = 81;
         int indent = 16;
+        Logic lg;
 
         public MainForm()
         {
@@ -27,7 +28,7 @@ namespace Chess
                     PictureBox pb = new PictureBox();
                     pb.SizeMode = PictureBoxSizeMode.AutoSize;
                     field[i, j] = new Cell(i, j, pb);
-                    field[i, j].Location = new Point(i * size + indent, j * size + indent);
+                    field[i, j].PBLocation = new Point(i * size + indent, j * size + indent);
                     field[i, j].PB.MouseClick += Pb_MouseClick;
                     this.Controls.Add(field[i, j].PB);
                     field[i, j].PB.Tag = new Position(i, j);
@@ -40,12 +41,15 @@ namespace Chess
             RedFrame.BackColor = Color.DarkRed;
 
             CreateDefaultPosition();
+
+            lg = new Logic(field);
         }
 
         private void Pb_MouseClick(object sender, MouseEventArgs e)
         {
             Position pos = (Position)((PictureBox)sender).Tag;
-            //field[pos.I, pos.J].LeaveFigure();
+            label1.Text = "i = " + pos.I + ", j = " + pos.J;
+            lg.Click(pos);            
         }
 
         public void CreateDefaultPosition()
@@ -59,13 +63,13 @@ namespace Chess
             Figure blackKing    =   new King(false, 3, 0);
             Figure blackQueen   =  new Queen(false, 4, 0);
             Figure blackPawn1   =   new Pawn(false, 0, 1);
-            Figure blackPawn2   =   new Pawn(false, 1, 0);
-            Figure blackPawn3   =   new Pawn(false, 2, 0);
-            Figure blackPawn4   =   new Pawn(false, 3, 0);
-            Figure blackPawn5   =   new Pawn(false, 4, 0);
-            Figure blackPawn6   =   new Pawn(false, 5, 0);
-            Figure blackPawn7   =   new Pawn(false, 6, 0);
-            Figure blackPawn8   =   new Pawn(false, 7, 0);
+            Figure blackPawn2   =   new Pawn(false, 1, 1);
+            Figure blackPawn3   =   new Pawn(false, 2, 1);
+            Figure blackPawn4   =   new Pawn(false, 3, 1);
+            Figure blackPawn5   =   new Pawn(false, 4, 1);
+            Figure blackPawn6   =   new Pawn(false, 5, 1);
+            Figure blackPawn7   =   new Pawn(false, 6, 1);
+            Figure blackPawn8   =   new Pawn(false, 7, 1);
 
             Figure whiteCastle1 = new Castle(true, 0, 7);
             Figure whiteCastle2 = new Castle(true, 7, 7);

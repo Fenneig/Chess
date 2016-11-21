@@ -15,14 +15,35 @@ namespace Chess
             _isDead = false;
             _isWhite = isWhite;
             if (_isWhite)
-                _pb.Image = Properties.Resources.WhiteQueen;
+                pb.Image = Properties.Resources.WhiteQueen;
             else
-                _pb.Image = Properties.Resources.BlackQueen;
+                pb.Image = Properties.Resources.BlackQueen;
+            _name = "Queen";
         }
 
         public override List<Position> Moveable()
         {
-            throw new NotImplementedException();
+            List<Position> temp = new List<Position>();
+
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if (_pos.I == i && _pos.J == j) continue;
+                    if (_pos.I == i) temp.Add(new Position(i, j));
+                    if (_pos.J == j) temp.Add(new Position(i, j));
+                    if (i + j == _pos.I + _pos.J) temp.Add(new Position(i, j));
+                    if (i - j == _pos.I - _pos.J) temp.Add(new Position(i, j));
+                }
+            }
+
+
+            return temp;
+        }
+
+        public override void Dying()
+        {
+            _isDead = true;
         }
     }
 }

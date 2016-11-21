@@ -15,23 +15,40 @@ namespace Chess
             _isDead = false;
             _isWhite = isWhite;
             if (_isWhite)
-                _pb.Image = Properties.Resources.WhitePawn;
+                pb.Image = Properties.Resources.WhitePawn;
             else
-                _pb.Image = Properties.Resources.BlackPawn;
+                pb.Image = Properties.Resources.BlackPawn;
+            _name = "Pawn";
         }
-
         public override List<Position> Moveable()
         {
-            List<Position> list = new List<Position>();
-            Position temp = new Position();
+            List<Position> temp = new List<Position>();
             if (_isWhite)
             {
                 if (_pos.J == 6)
-                    list.Add(new Position(_pos.I, _pos.J - 2));
+                    temp.Add(new Position(_pos.I, _pos.J - 2));
                 for (int i = -1; i <= 1; i++)
-                    list.Add(new Position(_pos.I - i, _pos.J - 1));
+                {
+                    if (_pos.I + i >= 0 || _pos.I + i < 8) 
+                        temp.Add(new Position(_pos.I - i, _pos.J - 1));
+                }
             }
-            return list;
+            else
+            {
+                if (_pos.J == 1)
+                    temp.Add(new Position(_pos.I, _pos.J+2));
+                for (int i = -1; i <= 1; i++)
+                {
+                    if (_pos.I + i >= 0 || _pos.I + i < 8)
+                        temp.Add(new Position(_pos.I + i, _pos.J + 1));
+                }
+            }
+            return temp;
+        }
+
+        public override void Dying()
+        {
+            _isDead = true;
         }
     }
 }

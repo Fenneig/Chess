@@ -9,15 +9,42 @@ namespace Chess
 {
     abstract class Figure
     {
-        public bool _isWhite;
-        public bool _isDead;
-        public Position _pos;
+        protected bool _isWhite;
+        protected bool _isDead;
+        protected Position _pos;
+        protected string _name;
 
-        public PictureBox _pb = new PictureBox();
+        private PictureBox _pb = new PictureBox();
+
+        public bool IsDead
+        {
+            get { return _isDead; }
+            set { _isDead = value; }
+        } 
 
         public abstract List<Position> Moveable();
 
-        public PictureBox pb { get { return _pb; } }
+        public PictureBox pb
+        {
+            get { return _pb; }
+        }
+
+        public string GetName
+        {
+            get { return _name; }
+        }
+
+        public bool IsWhite
+        {
+            get { return _isWhite; }
+        }
+
+        public Position Pos
+        {
+            set { _pos = value; }
+        }
+
+        public abstract void Dying();
         
     }
 }
