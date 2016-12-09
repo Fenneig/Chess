@@ -12,10 +12,13 @@ namespace Chess
     {
         private PictureBox _pb;
         private bool _isWhiteCell;
-        private bool _isOccupied;
-        private Figure _fig;
+        private bool _isOccupied = false;
         private bool _isSelected = false;
         private bool _moves = false;
+        private int _isBeatenByWhite = 0;
+        private int _isBeatenByBlack = 0;
+        private Figure _fig;
+        private Position _pos;
 
         public Point PBLocation
         {
@@ -34,6 +37,7 @@ namespace Chess
             _pb.SizeMode = PictureBoxSizeMode.AutoSize;
             _isOccupied = false;
             _fig = null;
+            _pos = new Position(i, j);
             if (_isWhiteCell)
             {
                 _pb.BackgroundImage = Properties.Resources.WhiteBG;
@@ -109,6 +113,31 @@ namespace Chess
         public Figure GetFigure
         {
             get { return _fig; }
+        }
+
+        public Position Pos
+        {
+            get { return _pos; }
+        }
+        
+        public void BeatWhite()
+        {
+            _isBeatenByWhite++;
+        }
+
+        public void deBeatWhite()
+        {
+            _isBeatenByWhite--;
+        }
+
+        public void BeatBlack()
+        {
+            _isBeatenByBlack++;
+        }
+
+        public void deBeatBlack()
+        {
+            _isBeatenByBlack--;
         }
         
 

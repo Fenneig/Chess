@@ -36,14 +36,8 @@ namespace Chess
                     if (i - j == _pos.I - _pos.J) temp.Add(new Position(i, j));
                 }
             }
-
-
+            
             return temp;
-        }
-
-        public override void Dying()
-        {
-            _isDead = true;
         }
     }
 }

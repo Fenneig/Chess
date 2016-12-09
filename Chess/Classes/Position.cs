@@ -26,12 +26,10 @@ namespace Chess
         public int I
         {
             get { return _i; }
-            set { _i = value; }
         }
         public int J
         {
             get { return _j; }
-            set { _j = value; }
         }
     }
 }

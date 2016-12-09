@@ -9,8 +9,10 @@ namespace Chess
 {
     class King : Figure
     {
+        
         public King(bool isWhite, int i, int j)
         {
+
             _pos = new Position(i, j);
             _isDead = false;
             _isWhite = isWhite;
@@ -34,13 +36,14 @@ namespace Chess
                         temp.Add(new Position(_pos.I + i, _pos.J + j));
                 }
             }
-
+            
+            if (!HasMoved)
+            {
+                temp.Add(new Position(_pos.I + 2, _pos.J));
+                temp.Add(new Position(_pos.I - 2, _pos.J));
+            }
+            
             return temp;
-        }
-
-        public override void Dying()
-        {
-            _isDead = true;
         }
     }
 }

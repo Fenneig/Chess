@@ -20,6 +20,7 @@ namespace Chess
                 pb.Image = Properties.Resources.BlackPawn;
             _name = "Pawn";
         }
+
         public override List<Position> Moveable()
         {
             List<Position> temp = new List<Position>();
@@ -29,8 +30,8 @@ namespace Chess
                     temp.Add(new Position(_pos.I, _pos.J - 2));
                 for (int i = -1; i <= 1; i++)
                 {
-                    if (_pos.I + i >= 0 || _pos.I + i < 8) 
-                        temp.Add(new Position(_pos.I - i, _pos.J - 1));
+                    if (_pos.I + i >= 0 && _pos.I + i < 8) 
+                        temp.Add(new Position(_pos.I + i, _pos.J - 1));
                 }
             }
             else
@@ -39,16 +40,12 @@ namespace Chess
                     temp.Add(new Position(_pos.I, _pos.J+2));
                 for (int i = -1; i <= 1; i++)
                 {
-                    if (_pos.I + i >= 0 || _pos.I + i < 8)
+                    if (_pos.I + i >= 0 && _pos.I + i < 8)
                         temp.Add(new Position(_pos.I + i, _pos.J + 1));
                 }
             }
             return temp;
         }
 
-        public override void Dying()
-        {
-            _isDead = true;
-        }
     }
 }

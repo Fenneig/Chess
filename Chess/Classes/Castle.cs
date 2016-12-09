@@ -37,10 +37,6 @@ namespace Chess
 
             return temp;
         }
-
-        public override void Dying()
-        {
-            _isDead = true;
-        }
+        
     }
 }

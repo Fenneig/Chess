@@ -24,8 +24,7 @@ namespace Chess
         public override List<Position> Moveable()
         {
             List<Position> temp = new List<Position>();
-
-
+            
             for (int i = 0; i < 8; i++)
             {
                 for (int j = 0; j < 8; j++)
@@ -37,11 +36,6 @@ namespace Chess
             }
 
             return temp;
-        }
-
-        public override void Dying()
-        {
-            _isDead = true;
         }
     }
 }

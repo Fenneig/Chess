@@ -106,16 +106,10 @@
     <None Include="Properties\Images\BlackCastle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\BlackKing.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\Images\BlackKnight.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Images\BlackPawn.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\BlackQueen.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Images\WhiteBishop.png" />
@@ -124,19 +118,25 @@
     <None Include="Properties\Images\WhiteCastle.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\Images\WhiteKing.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Properties\Images\WhiteKnight.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Images\WhiteQueen.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Images\BlackBGMove.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\Images\WhiteBGMove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackKing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\BlackQueen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteKing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Images\WhiteQueen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
